@@ -10,7 +10,7 @@
             "email": "david@konecny.eu"
         }
     ],
-    "type": "project",
+    "type": "library",
     "require": {
 		"php": ">=7.1",
         "thecookieshows/request-parameter-manager": "dev-master",
