@@ -3,7 +3,7 @@
     "description": "Doctrine search package",
     "keywords": ["doctrine", "search", "package", "symfony"],
     "homepage": "https://github.com/TheCookieShows/DoctrineSearch",
-    "license": "DBAD",
+    "license": "MIT",
     "authors": [
         {
             "name": "David Konečný",
