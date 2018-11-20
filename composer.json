@@ -1,0 +1,25 @@
+{
+    "name": "thecookieshows/doctrine-search",
+    "description": "Doctrine search package",
+    "keywords": ["doctrine", "search", "package", "symfony"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "David Konečný",
+            "email": "david@konecny.eu"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.1",
+        "thecookieshows/request-parameter-manager": "dev-master",
+        "doctrine/orm": "^2.6"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "TheCookieShows\\DoctrineSearch\\": "src/"
+        }
+    }
+}
