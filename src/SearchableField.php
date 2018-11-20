@@ -72,10 +72,11 @@ class SearchableField
     public function getValue()
     {
         $parser = $this->type->getParser();
-        if (!$parser && $this->value !== self::DEFAULT_VALUE)
-            return $parser::parse($this->value);
-        else
+        if($parser == false)
             return $this->value;
+
+        return $parser::parse($this->value);
+
     }
 
     /**
