@@ -26,11 +26,11 @@ class SearchEngine
      * @param ArrayCollection $searchFieldCollection
      * @return ArrayCollection
      */
-    public function search(SearchableInterface $repository, Request $request, ArrayCollection $searchFieldCollection) : ArrayCollection
+    public function search(SearchableInterface $repository, Request $request, ArrayCollection $searchFieldCollection, $limit = 20) : ArrayCollection
     {
         $queryProcessor = new QueryProcessor($request, $searchFieldCollection);
         $searchFieldCollection = $queryProcessor->getSearchFieldsCollection();
 
-        return new ArrayCollection($repository->findBySearchCriteria($queryProcessor->getOrderBy(), $queryProcessor->getDirection(), $searchFieldCollection));
+        return new ArrayCollection($repository->findBySearchCriteria($queryProcessor->getOrderBy(), $queryProcessor->getDirection(), $searchFieldCollection, $queryProcessor->getPage(), $limit));
     }
 }
