@@ -10,6 +10,7 @@ namespace TheCookieShows\DoctrineSearch;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * Interface to derive Repositories from to implement search functionality
@@ -25,5 +26,5 @@ interface SearchableInterface
      * @param ArrayCollection $searchFieldCollection
      * @return array|null
      */
-    public function findBySearchCriteria(string $orderBy, string $direction, ArrayCollection $searchFieldCollection, int $page, int $limit) : ?array;
+    public function findBySearchCriteria(string $orderBy, string $direction, ArrayCollection $searchFieldCollection, int $page, int $limit) : ?Paginator;
 }
