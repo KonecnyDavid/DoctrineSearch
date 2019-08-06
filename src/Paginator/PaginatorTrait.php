@@ -6,7 +6,7 @@
  * Time: 23:15
  */
 
-namespace App\Utilities\Search\Paginator;
+namespace TheCookieShows\DoctrineSearch\Paginator;
 
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
