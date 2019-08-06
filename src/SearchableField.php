@@ -80,6 +80,11 @@ class SearchableField
 
     }
 
+    public function getPlainValue() : string
+    {
+        return $this->value;
+    }
+
     /**
      * @return string
      */
@@ -102,5 +107,10 @@ class SearchableField
     public function getType()
     {
         return $this->type;
+    }
+
+    public function hasValue() : bool
+    {
+      return !($this->value == self::DEFAULT_VALUE);
     }
 }
