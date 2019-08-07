@@ -79,7 +79,7 @@ class QueryProcessor
     public function getSearchFieldsCollection() : ArrayCollection
     {
         foreach ($this->searchFieldCollection as $field){
-            if ($this->query->has($field->getName())){
+            if ($this->query->has($field->getName()) && $this->query->get($field->getName()) !== ""){
                 $field->setValue($this->query->get($field->getName()));
             }
         }
