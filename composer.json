@@ -13,7 +13,7 @@
     "type": "library",
     "require": {
 		"php": ">=7.1",
-        "thecookieshows/request-parameter-manager": "dev-master",
+        "thecookieshows/request-parameter-manager": "1.*",
         "doctrine/orm": "^2.6"
     },
     "require-dev": {
